@@ -8,18 +8,19 @@ import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import LoadMoreBtn from "../LoadMoreBtn/LoadMoreBtn";
 import ImageModal from "../ImageModal/ImageModal";
 import css from "./App.module.css"
+import { ImageInterface, TargetPhotoInterface } from "../../types";
 
 
 
 export default function App() {
 
-    const [articles, setArticles] = useState([]);
-    const [loader, setLoader] = useState(false)
-    const [error, setError] = useState(false)
-    const [page, setPage] = useState(1)
-    const [searchQuery, setSearchQuery] = useState("")
-    const [modalWindow, setModalWindow] = useState(false)
-    const [targetPhoto, setTargetPhoto] = useState({alt: "", url: ""})
+    const [articles, setArticles] = useState<ImageInterface[]>([]);
+    const [loader, setLoader] = useState<boolean>(false)
+    const [error, setError] = useState<boolean>(false)
+    const [page, setPage] = useState<number>(1)
+    const [searchQuery, setSearchQuery] = useState<string>("")
+    const [modalWindow, setModalWindow] = useState<boolean>(false)
+    const [targetPhoto, setTargetPhoto] = useState<TargetPhotoInterface>({ alt: "", url: "" })
 
     useEffect(() => {
         if (searchQuery.trim() === "") {
@@ -43,7 +44,7 @@ export default function App() {
 
     }, [searchQuery, page])
 
-    const handleSearch = async (query) => {
+    const handleSearch = async (query: string) => {
         setSearchQuery(query)
         setPage(1)
         setArticles([])
@@ -54,7 +55,7 @@ export default function App() {
         
     }
 
-    const handleOpenModal = (alt, url) => {
+    const handleOpenModal = (alt: string, url: string) => {
         setTargetPhoto({alt, url})
         setModalWindow(true)
     }

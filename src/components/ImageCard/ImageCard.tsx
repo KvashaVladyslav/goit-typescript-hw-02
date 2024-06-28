@@ -1,8 +1,9 @@
 import { FaRegUser } from "react-icons/fa";
 import { FcLike } from "react-icons/fc";
 import css from "./ImageCard.module.css"
+import { ImageCardInterface } from "../../types";
 
-export default function ImageCard({ item: { urls: { small, regular}, alt_description, likes, user: {name} }, openModal }) {
+export default function ImageCard({ item: { urls: { small, regular}, alt_description, likes, user: {name} }, openModal }: ImageCardInterface) {
 
     return (
         <div className={css.container} >

@@ -3,8 +3,9 @@ import toast, { Toaster } from "react-hot-toast"
 import { ImWondering } from "react-icons/im";
 import css from "./SearchBar.module.css"
 import { FcSearch } from "react-icons/fc";
+import { SearchBarInterface } from "../../types";
 
-export default function SearchBar({ onSubmit }) {
+export default function SearchBar({ onSubmit }: SearchBarInterface) {
 
     const notifyEmpty = () => toast("Please, enter something on the searching field", {icon: <ImWondering />})
     

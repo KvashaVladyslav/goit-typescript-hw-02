@@ -1,9 +1,11 @@
 import axios from "axios";
+import { ImageInterface, ImagesResponse } from "./types";
 
 axios.defaults.baseURL = "https://api.unsplash.com/";
 
-export const getArticles = async (query, currentPage) => {
-  const response = await axios.get("/search/photos", {
+
+export const getArticles = async (query: string, currentPage: number): Promise<ImageInterface[]> => {
+  const response = await axios.get<ImagesResponse>("/search/photos", {
     params: {
       query: query,
       page: currentPage,
@@ -13,3 +15,4 @@ export const getArticles = async (query, currentPage) => {
   });
   return response.data.results;
 };
+
