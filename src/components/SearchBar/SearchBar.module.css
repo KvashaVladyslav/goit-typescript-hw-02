@@ -1,0 +1,43 @@
+.container {
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(182, 153, 196);
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 16px;
+    padding: 10px;
+}
+
+.input {
+    padding: 0px 8px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+}
+
+.input:hover,
+.input:focus {
+    background-color: rgb(214, 214, 214);
+}
+
+.button {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    padding: 6px 10px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+}
+
+.button:hover,
+.button:focus {
+    background-color: rgb(214, 214, 214);
+}

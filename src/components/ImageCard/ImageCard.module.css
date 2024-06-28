@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 8px;
+    width: 400px;
+}
+
+.container:hover, 
+.container:focus {
+    transition: transform 1s ease;
+    transform: scale(1.03);
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.image {
+    height: 400px;
+    cursor: pointer;
+}
