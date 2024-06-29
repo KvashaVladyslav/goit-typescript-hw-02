@@ -1,5 +1,5 @@
 export interface ImageInterface {
-    id?: string;
+    id: string;
     urls: {
         small: string;
         regular: string;
@@ -38,10 +38,10 @@ export interface ModalImagesInterface {
 
 export interface ImageGalleryInterface {
     items: ImageInterface[];
-    openModal: TargetPhotoInterface
+    openModal: (alt: string, url: string) => void
 }
 
 export interface ImageCardInterface {
     item: ImageInterface;
-    openModal: TargetPhotoInterface
+    openModal: (alt: string, url: string) => void
 }
